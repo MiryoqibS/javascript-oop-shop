@@ -13,8 +13,11 @@ export class Header {
         this.headerElement.innerHTML = `
             <nav class="header__menu">
                 <a class="header__logo" href="/">
-                    <svg width="152" height="32" aria-label="Логотип">
+                    <svg width="40" height="32" aria-label="Логотип">
                         <use href="${sprites}#icon-logo"></use>
+                    </svg>
+                    <svg width="100" height="10" aria-label="Логотип">
+                        <use href="${sprites}#icon-logo-title"></use>
                     </svg>
                 </a>
 
@@ -23,7 +26,7 @@ export class Header {
                         <svg width="24" height="24" aria-label="Навигация по каталогу">
                             <use href="${sprites}#icon-dropdown"></use>
                         </svg>
-                        Каталог
+                        <p>Каталог<p>
                     </button>
                     <div class="header__search">
                         <input class="header__input" placeholder="Найти товар" />
@@ -35,6 +38,15 @@ export class Header {
             </nav>
 
             <div class="header__actions">
+                <div class="header-action">
+                    <svg width="24" height="24">
+                        <use href="${sprites}#icon-dropdown" 
+                            class="header-action__icon" 
+                            aria-label="Навигация по каталогу">
+                        </use>
+                    </svg>
+                    <p class="header-action__description">Каталог</p>
+                </div>
                 <div class="header-action">
                     <svg width="22" height="20">
                         <use href="${sprites}#icon-heart" 
@@ -63,7 +75,7 @@ export class Header {
                     <p class="header-action__description">Корзина</p>
                 </div>
                 <button class="header__button button button--primary" type="button">
-                    Войти
+                    <p>Войти</p>
                     <svg width="24" height="24" aria-label="Войти в аккаунт">
                         <use href="${sprites}#icon-log-in"></use>
                     </svg>

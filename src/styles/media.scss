@@ -1,0 +1,37 @@
+// Breakpoints for responsive design
+$desktop: 1024px;
+$tablet: 768px;
+$mobileL: 425px;
+$mobile: 360px;
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint ==desktop {
+        @media (max-width: $desktop) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==tablet {
+        @media (max-width: $tablet) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==mobileL {
+        @media (max-width: $mobileL) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==mobile {
+        @media (max-width: $mobile) {
+            @content;
+        }
+    }
+}
+
+@mixin custom-respond($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+};
