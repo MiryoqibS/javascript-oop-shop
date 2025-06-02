@@ -1,0 +1,78 @@
+@use "../../styles/mixins.scss" as *;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 16px;
+    column-gap: 40px;
+
+    // Left part navigation menu
+    &__menu {
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+        width: 100%;
+    }
+
+    &__catalog {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        width: 100%;
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 2px solid var(--color-secondary);
+        border-radius: 4px;
+        padding: 8px 24px;
+        color: var(--color-secondary);
+        width: 100%;
+        column-gap: 6px;
+    }
+
+    &__input {
+        @include font-xs;
+
+        width: 100%;
+    }
+
+    // Right part actions
+    &__actions {
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+        height: 100%;
+    }
+
+    &-action {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 8px;
+        height: 100%;
+        justify-content: space-between;
+        cursor: pointer;
+
+        &__icon {
+            transition: all .4s ease;
+        }
+
+        @include hover {
+            .header-action__icon {
+                color: var(--color-primary-hover);
+            }
+        }
+
+        &__description {
+            line-height: normal;
+        }
+    }
+
+    &__button {
+        padding-left: 24px;
+    }
+}

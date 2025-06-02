@@ -1,0 +1,46 @@
+@use "sass:math";
+
+@mixin fluid-text($min, $max) {
+    font-size: clamp(
+        #{$min}px,
+        math.div($max, 1440) * 100vw,
+        #{$max}px,
+    );
+}
+
+@mixin font-xs {
+    @include fluid-text(16, 18);
+}
+
+@mixin font-s {
+    @include fluid-text(20, 24);
+}
+
+@mixin font-m {
+    @include fluid-text(24, 36);
+}
+
+@mixin font-l {
+    @include fluid-text(36, 48);
+}
+
+@mixin font-xl {
+    @include fluid-text(48, 64);
+}
+
+
+@mixin hover() {
+    @media all and (hover: hover) {
+        &:hover {
+            cursor: pointer;
+            @content;
+        }
+    }
+
+    @media all and (hover: none) {
+        &:active {
+            cursor: pointer;
+            @content;
+        }
+    }
+}

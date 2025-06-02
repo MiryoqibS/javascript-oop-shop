@@ -1,0 +1,32 @@
+@use "./mixins.scss" as *;
+
+.button {
+    @include font-xs;
+
+    display: flex;
+    align-items: center;
+    background-color: var(--color-gray-lightest);
+    color: var(--color-gray-hardest);
+    border-radius: 4px;
+    padding: 8px;
+    column-gap: 8px;
+    transition: all .4s ease;
+
+    &--secondary {
+        background-color: var(--color-secondary);
+        color: var(--color-secondary-text);
+
+        @include hover {
+            background-color: var(--color-secondary-hover);
+        }
+    }
+
+    &--primary {
+        background-color: var(--color-primary);
+        color: var(--color-primary-text);
+
+        @include hover {
+            background-color: var(--color-primary-hover);
+        }
+    }
+}

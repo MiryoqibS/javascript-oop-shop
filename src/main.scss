@@ -1,0 +1,10 @@
+// Base styles
+@use "./styles/reset.scss";
+@use "./styles/variables.scss";
+@use "./styles/typography.scss";
+@use "./styles/mixins.scss";
+@use "./styles/utils.scss";
+@use "./styles/global.scss";
+
+// Components
+@use "./styles/button.scss"

@@ -1,0 +1,38 @@
+:root {
+    --container-width: 1200px; /* Default container width */
+    --container-padding-x: 40px; /* Padding for the container */
+
+    // Main colors
+    --color-background: rgb(244, 244, 242); 
+    --color-surface: rgb(255, 255, 255);
+    --color-primary: rgb(255, 102, 51);
+    --color-primary-hover: rgb(255, 79, 31);
+    --color-secondary: rgb(112, 192, 91);
+    --color-secondary-hover: rgb(92, 172, 71);
+
+    // Text colors
+    --color-background-text: rgb(41, 30, 15);
+    --color-surface-text: rgb(65, 65, 65);
+    --color-primary-text: rgb(255, 255, 255);
+    --color-secondary-text: rgb(255, 255, 255);
+
+    // Gray scale colors
+    --color-gray-lightest: rgb(243, 242, 241);
+    --color-gray-light: rgb(191, 191, 191);
+    --color-gray-hard: rgb(143, 143, 143);
+    --color-gray-hardest: rgb(96, 96, 96);
+
+    // System colors
+    --color-success: rgb(0, 140, 73);
+    --color-info: rgb(28, 185, 252);
+    --color-waring: rgb(252, 162, 28);
+    --color-error: rgb(216, 0, 0);
+
+    // Shadows
+    --shadow: 8px 16px 32px 0 rgba(0, 0, 0, 0.1);
+    --shadow-primary: 8px 16px 32px 0 rgba(255, 102, 51, 0.2);
+    --shadow-secondary: 8px 16px 32px 0 rgba(112, 192, 91, 0.2);
+
+    // Fonts
+    --font-base: "Rubik", sans-serif;
+}

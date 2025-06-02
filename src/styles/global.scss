@@ -1,0 +1,8 @@
+@use "./mixins.scss" as *;
+
+body,html {
+    @include font-xs;
+
+    line-height: 1.5;
+    font-family: var(--font-base);
+}
