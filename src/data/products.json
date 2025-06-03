@@ -1,0 +1,96 @@
+[
+    {
+        "id": 1,
+        "title": "Подушка ортопедическая",
+        "category": "Дом",
+        "price": 1290,
+        "description": "Комфортная подушка с эффектом памяти для здорового сна.",
+        "image": "https://cdn1.ozone.ru/s3/multimedia-v/c600/6814001407.jpg",
+        "rating": 4.8,
+        "isOriginal": true
+    },
+    {
+        "id": 2,
+        "title": "Электрочайник Xiaomi Mi",
+        "category": "Техника",
+        "price": 2590,
+        "description": "Умный электрочайник с поддержкой Bluetooth и поддержанием температуры.",
+        "image": "https://micom.kz/image/cache/catalog/Kitchen/6952-3-800x800.jpg",
+        "rating": 4.7,
+        "isOriginal": true
+    },
+    {
+        "id": 3,
+        "title": "Вкусные орехи грецкие, 500г",
+        "category": "Продукты",
+        "price": 349,
+        "description": "Свежие очищенные грецкие орехи без добавок.",
+        "image": "https://ir.ozone.ru/s3/multimedia-1-q/c1000/7152956342.jpg",
+        "rating": 4.5
+    },
+    {
+        "id": 4,
+        "title": "Фитнес-браслет Honor Band 7",
+        "category": "Аксессуары",
+        "price": 3190,
+        "description": "Трекер активности, пульсометр, защита от воды, до 14 дней без подзарядки.",
+        "image": "https://ir.ozone.ru/s3/multimedia-1-9/c1000/6932826189.jpg",
+        "rating": 4.6
+    },
+    {
+        "id": 5,
+        "title": "Настольная лампа с USB",
+        "category": "Дом",
+        "price": 890,
+        "description": "Компактная светодиодная лампа с регулировкой яркости и USB-портом.",
+        "image": "https://content1.rozetka.com.ua/goods/images/big/258086064.jpg",
+        "rating": 4.4
+    },
+    {
+        "id": 6,
+        "title": "Смартфон Samsung Galaxy A15",
+        "category": "Техника",
+        "price": 14990,
+        "description": "Современный смартфон с хорошей камерой и ёмкой батареей.",
+        "image": "https://bm.technave.com/wp-content/uploads/2023/12/0055872_samsung-galaxy-a15-5g-8gb-ram-256gb-rom.jpeg",
+        "rating": 4.3,
+        "isOriginal": true
+    },
+    {
+        "id": 7,
+        "title": "Кофе молотый Arabica Premium, 250г",
+        "category": "Продукты",
+        "price": 430,
+        "description": "Ароматный кофе средней обжарки из 100% арабики.",
+        "image": "https://tse1.mm.bing.net/th/id/OIP.PE-3GfpxqO7w-pFyjvgeEgHaHa?r=0&rs=1&pid=ImgDetMain",
+        "rating": 4.9
+    },
+    {
+        "id": 8,
+        "title": "Рюкзак городской с USB-портом",
+        "category": "Аксессуары",
+        "price": 1790,
+        "description": "Стильный и практичный рюкзак для города и поездок.",
+        "image": "https://ir.ozone.ru/s3/multimedia-1-o/c1000/7044135612.jpg",
+        "rating": 4.7
+    },
+    {
+        "id": 9,
+        "title": "Набор кастрюль 6 предметов",
+        "category": "Дом",
+        "price": 4490,
+        "description": "Прочные кастрюли из нержавеющей стали с крышками.",
+        "image": "https://limecook.com/wp-content/uploads/2020/02/cookware-set-6pcs-1-2.jpg",
+        "rating": 4.6
+    },
+    {
+        "id": 10,
+        "title": "Фен для волос Catvil Pro Max",
+        "category": "Техника",
+        "price": 2390,
+        "description": "Компактный фен с режимом ионизации и защиты от перегрева.",
+        "image": "https://tse4.mm.bing.net/th/id/OIP.RInY6NHnVZnF_sQwXaKVhgHaHa?r=0&rs=1&pid=ImgDetMain",
+        "rating": 4.5,
+        "isOriginal": true
+    }
+]

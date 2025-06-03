@@ -10,7 +10,7 @@ if (!app) {
     throw new Error("App element not found");
 }
 
-// Render components
+// Рендер компонентов
 const header = new Header(app);
 header.render();
 

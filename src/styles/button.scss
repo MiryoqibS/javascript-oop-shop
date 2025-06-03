@@ -29,4 +29,15 @@
             background-color: var(--color-primary-hover);
         }
     }
+
+    &--outline {
+        background-color: var(--color-surface);
+        color: var(--color-secondary);
+        border: 2px solid var(--color-secondary);
+
+        @include hover {
+            background-color: var(--color-secondary-hover);
+            color: var(--color-surface);
+        }
+    }
 }

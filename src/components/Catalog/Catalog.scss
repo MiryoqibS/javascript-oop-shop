@@ -1,3 +1,38 @@
+@use "../../styles/mixins.scss" as *;
+
 .catalog {
-    
+    margin-top: 32px;
+
+    &-section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+        align-items: start;
+
+        &__title {
+            @include font-s;
+
+            display: flex;
+            align-items: center;
+            column-gap: 12px;
+            color: var(--color-background-text);
+            text-decoration: none;
+
+            svg {
+                transition: transform .4s ease;
+            }
+
+            @include hover {
+                svg {
+                    transform: translateX(10px);
+                }
+            }
+        }
+
+        &__products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+    }
 }
