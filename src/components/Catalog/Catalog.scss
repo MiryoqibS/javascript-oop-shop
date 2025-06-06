@@ -1,4 +1,5 @@
 @use "../../styles/mixins.scss" as *;
+@use "../../styles/media.scss" as media;
 
 .catalog {
     margin-top: 32px;
@@ -33,6 +34,21 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 32px;
+            width: 100%;
+
+            @include media.respond-to(desktop) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include media.respond-to(tablet) {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 24px;
+            }
+
+            @include media.custom-respond(500px) {
+                justify-content: center;
+                grid-template-columns: repeat(1, minmax(250px, 350px));
+            }
         }
     }
 }
