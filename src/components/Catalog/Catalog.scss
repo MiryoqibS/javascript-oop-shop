@@ -2,6 +2,9 @@
 @use "../../styles/media.scss" as media;
 
 .catalog {
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
     margin-top: 32px;
 
     &-section {
@@ -11,7 +14,7 @@
         align-items: start;
 
         &__title {
-            @include font-s;
+            @include font-m;
 
             display: flex;
             align-items: center;

@@ -17,18 +17,18 @@ export class Product {
     }
 
     render() {
-        // Link for svg elements
+        // Константы для svg элементов
         const SVG_NS = "http://www.w3.org/2000/svg";
         const XLINK_NS = "http://www.w3.org/1999/xlink";
 
         const productElement = document.createElement("article");
         productElement.className = "catalog-section__product product";
 
-        // Product header
+        // Контейнер верхней части продукта 
         const productHeader = document.createElement("div");
         productHeader.className = "product__header";
 
-        // Product image
+        // Изображение продукта
         const productImage = document.createElement("img");
         productImage.className = "product__image";
         productImage.src = this.image;
@@ -36,7 +36,7 @@ export class Product {
 
         productElement.append(productHeader);
 
-        // Product verify
+        // Подтверждение продукта если оно есть
         if (this.isOriginal) {
             const productVerify = document.createElement("span");
             productVerify.className = "product__original";
@@ -57,21 +57,21 @@ export class Product {
             productHeader.append(productVerify);
         };
 
-        // Product body
+        // Контейнер для информации о продукте
         const productBody = document.createElement("div");
         productBody.className = "product__body";
 
-        // Product price
+        // Цена продукта
         const productPrice = document.createElement("p");
         productPrice.className = "product__price";
         productPrice.innerText = `${this.price}₽`;
 
-        // Product title
+        // Названые продукта
         const productTitle = document.createElement("h3");
         productTitle.className = "product__title";
         productTitle.innerText = this.title;
 
-        // Product rating
+        // Рейтинг продукта
         const productRating = document.createElement("div");
         productRating.className = "product__rating";
 
@@ -89,7 +89,7 @@ export class Product {
         productRating.append(productRatingText);
 
 
-        // Product button
+        // Кнопка для добавления/удаления продукта из корзины
         let inCart = this.storage.getFromStorage("cart").includes(this.id);
         const productButton = document.createElement("button");
         productButton.classList.add("button");
@@ -108,12 +108,11 @@ export class Product {
 
         productBody.append(productPrice, productTitle, productRating, productButton);
 
-        // Add header, body elements
+        // Добавляем дочерние элементы в основной контейнер продукта 
         productElement.append(productHeader, productBody);
 
         return productElement;
     }
-
 
     addToCart(event) {
         let prevProducts = this.storage.getFromStorage("cart");
@@ -123,16 +122,18 @@ export class Product {
         };
 
         if (!prevProducts.includes(this.id)) {
-            // Add button
+            // Добавляем элемент в корзину
             prevProducts.push(this.id);
             this.storage.saveToStorage("cart", prevProducts);
+
             event.target.classList.remove("button--secondary");
             event.target.classList.add("button--primary");
             event.target.innerText = "Удалить с корзины"
         } else {
-            // Remove button
+            // Удаляем элемент из корзины
             const newProducts = prevProducts.filter(id => id !== this.id);
             this.storage.saveToStorage("cart", newProducts);
+
             event.target.classList.remove("button--primary");
             event.target.classList.add("button--secondary");
             event.target.innerText = "В корзину";
