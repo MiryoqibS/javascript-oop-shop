@@ -4,6 +4,4 @@ export class Cart {
     constructor(parameters) {
         
     }
-
-    
 }
