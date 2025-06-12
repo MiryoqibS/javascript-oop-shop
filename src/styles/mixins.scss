@@ -9,7 +9,7 @@
 }
 
 @mixin font-xs {
-    @include fluid-text(16, 18);
+    @include fluid-text(14, 16);
 }
 
 @mixin font-s {

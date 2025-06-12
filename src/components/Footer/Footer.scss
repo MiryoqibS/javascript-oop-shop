@@ -1,4 +1,5 @@
 @use "../../styles/mixins.scss" as *;
+@use "../../styles/media.scss" as media;
 
 .footer {
     padding: 40px 28px;
@@ -16,16 +17,26 @@
     &__menu {
         display: flex;
         align-items: center;
+        justify-content: center;
         column-gap: 20px;
+        row-gap: 25px;
+
+        @include media.respond-to(tablet) {
+            flex-wrap: wrap;
+        }
     }
 
     &__logo {
-        display: block;
-        width: 64px;
-        position: relative;
-
         img {
-            width: 100%;
+            width: 80px;
+
+            @include media.respond-to(mobile) {
+                width: 120px;
+            }
+        }
+
+        @include media.respond-to(tablet) {
+            order: -2;
         }
     }
 
@@ -33,10 +44,16 @@
         display: flex;
         align-items: center;
         column-gap: 30px;
+        flex-wrap: wrap;
+
+        @include media.respond-to(tablet) {
+            column-gap: 15px;
+            width: 100%;
+            justify-content: space-between;
+        }
 
         &-link {
-            @include font-xs;
-
+            font-size: 18px;
             cursor: pointer;
             text-decoration: none;
             color: var(--color-surface-text);
@@ -45,19 +62,33 @@
             @include hover {
                 color: var(--color-primary-hover);
             }
+
+            @include media.respond-to(tablet) {
+                font-size: 16px;
+            }
         }
     }
 
     &__info {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        width: 100%;
+        column-gap: 40px;
+        margin-left: auto;
+
+        @include media.respond-to(tablet) {
+            order: -1;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        @include media.respond-to(mobile) {
+            margin: 0;
+        }
     }
 
     &__socials {
-        display: flex;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(4, 24px);
         column-gap: 20px;
         margin-left: auto;
 
@@ -68,6 +99,14 @@
             @include hover {
                 color: var(--color-secondary-hover);
             }
+        }
+
+        @include media.custom-respond(1250px) {
+            grid-template-columns: repeat(2, 24px)
+        }
+
+        @include media.respond-to(tablet) {
+            grid-template-columns: repeat(4, 24px)
         }
     }
 
@@ -80,6 +119,7 @@
         column-gap: 10px;
         color: var(--color-surface-text);
         transition: all 0.4s ease;
+        width: 140px;
 
         @include hover {
             color: var(--color-secondary-hover);
@@ -94,6 +134,7 @@
         column-gap: 10px;
         color: var(--color-surface-text);
         transition: all 0.4s ease;
+        margin-left: auto;
 
         img {
             height: 15px;

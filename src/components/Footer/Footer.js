@@ -107,7 +107,7 @@ export class Footer {
         phoneIconUse.setAttributeNS(XLINK_NS, "xlink:href", `${sprites}#icon-phone`);
         phoneIcon.appendChild(phoneIconUse);
 
-        footerPhone.appendChild(phoneIcon)
+        footerPhone.appendChild(phoneIcon);
         footerPhone.append("8 800 777 33 33");
 
         // Дизайнер
@@ -121,12 +121,13 @@ export class Footer {
         // Информация
         const footerInfo = document.createElement("div");
         footerInfo.className = "footer__info";
-        footerInfo.append(footerPhone, footerDesign);
+        footerInfo.append(footerSocials, footerPhone);
 
-        // Добавляем дочерние элементы в футер меню 
-        footerMenu.append(footerLogo, footerNav, footerSocials);
+        // Добавляем дочерние элементы в меню футера
+        footerMenu.append(footerLogo, footerNav, footerInfo);
 
-        footerContainer.append(footerMenu, footerInfo);
+        // Добавляем дочерние элементы в основной футер
+        footerContainer.append(footerMenu, footerDesign);
         this.footerElement.appendChild(footerContainer);
         this.root.appendChild(this.footerElement);
     }
