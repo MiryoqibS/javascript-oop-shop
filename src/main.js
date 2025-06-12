@@ -18,5 +18,5 @@ const catalog = new Catalog(app);
 catalog.render();
 
 const footer = new Footer(app);
-footer.render();
+footer.init();
 

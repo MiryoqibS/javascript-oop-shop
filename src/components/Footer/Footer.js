@@ -9,11 +9,11 @@ export class Footer {
         this.footerElement = document.createElement("footer");
     }
 
-    render() {
-        // Константы для svg элементов
-        const SVG_NS = "http://www.w3.org/2000/svg";
-        const XLINK_NS = "http://www.w3.org/1999/xlink";
+    init() {
+        this.render();
+    }
 
+    render() {
         this.footerElement.className = "footer";
 
         const footerContainer = document.createElement("div");
@@ -22,6 +22,36 @@ export class Footer {
         const footerMenu = document.createElement("div");
         footerMenu.className = "footer__menu";
 
+        // Элемент логотипа
+        const footerLogo = this.#createFooterLogo();
+
+        // Элемент навигации
+        const footerNav = this.#createFooterNav();
+
+        // Социальные сети
+        const footerSocials = this.#createFooterSocials();
+
+        // Номер телефона
+        const footerPhone = this.#createFooterPhone();
+
+        // Дизайнер
+        const footerDesign = this.#createFooterDesign();
+
+        // Информация
+        const footerInfo = document.createElement("div");
+        footerInfo.className = "footer__info";
+        footerInfo.append(footerSocials, footerPhone);
+
+        // Добавляем дочерние элементы в меню футера
+        footerMenu.append(footerLogo, footerNav, footerInfo);
+
+        // Добавляем дочерние элементы в основной футер
+        footerContainer.append(footerMenu, footerDesign);
+        this.footerElement.appendChild(footerContainer);
+        this.root.appendChild(this.footerElement);
+    }
+
+    #createFooterLogo() {
         // Элемент логотипа
         const footerLogo = document.createElement("a");
         footerLogo.href = "/";
@@ -34,6 +64,10 @@ export class Footer {
         // Добавляем фото логотипа в основной блок логотипа
         footerLogo.appendChild(logoImage);
 
+        return footerLogo;
+    }
+
+    #createFooterNav() {
         // Элемент навигации
         const footerNav = document.createElement("nav");
         footerNav.className = "footer__nav";
@@ -68,6 +102,14 @@ export class Footer {
             footerNav.appendChild(navLink);
         };
 
+        return footerNav;
+    }
+
+    #createFooterSocials() {
+        // Константы для svg элементов
+        const SVG_NS = "http://www.w3.org/2000/svg";
+        const XLINK_NS = "http://www.w3.org/1999/xlink";
+
         // Социальные сети
         const footerSocials = document.createElement("div");
         footerSocials.className = "footer__socials";
@@ -77,7 +119,6 @@ export class Footer {
             `${sprites}#icon-facebook`,
             `${sprites}#icon-youtube`,
         ];
-
 
         for (const icon of socialIcons) {
             const social = document.createElement("a");
@@ -97,8 +138,16 @@ export class Footer {
             footerSocials.appendChild(social);
         };
 
+        return footerSocials;
+    }
+
+    #createFooterPhone() {
+        // Константы для svg элементов
+        const SVG_NS = "http://www.w3.org/2000/svg";
+        const XLINK_NS = "http://www.w3.org/1999/xlink";
+
         // Номер телефона
-        const footerPhone = document.createElement("div");
+        const footerPhone = document.createElement("a");
         footerPhone.className = "footer__phone";
         const phoneIcon = document.createElementNS(SVG_NS, "svg");
         phoneIcon.setAttribute("width", 24);
@@ -108,8 +157,13 @@ export class Footer {
         phoneIcon.appendChild(phoneIconUse);
 
         footerPhone.appendChild(phoneIcon);
+        footerPhone.href = "tel:88007773333";
         footerPhone.append("8 800 777 33 33");
 
+        return footerPhone;
+    }
+
+    #createFooterDesign() {
         // Дизайнер
         const footerDesign = document.createElement("div");
         footerDesign.className = "footer__design";
@@ -118,17 +172,6 @@ export class Footer {
         footerDesign.append("Дизайн");
         footerDesign.appendChild(footerDesignLogo);
 
-        // Информация
-        const footerInfo = document.createElement("div");
-        footerInfo.className = "footer__info";
-        footerInfo.append(footerSocials, footerPhone);
-
-        // Добавляем дочерние элементы в меню футера
-        footerMenu.append(footerLogo, footerNav, footerInfo);
-
-        // Добавляем дочерние элементы в основной футер
-        footerContainer.append(footerMenu, footerDesign);
-        this.footerElement.appendChild(footerContainer);
-        this.root.appendChild(this.footerElement);
+        return footerDesign;
     }
 }

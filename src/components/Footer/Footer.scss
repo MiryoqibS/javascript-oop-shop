@@ -111,8 +111,8 @@
     }
 
     &__phone {
-        @include font-xs;
-
+        font-size: 14px;
+        text-decoration: none;
         cursor: pointer;
         display: flex;
         align-items: center;
